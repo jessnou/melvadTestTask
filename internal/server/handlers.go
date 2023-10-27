@@ -96,6 +96,6 @@ func handlePostgresUser(db interfaces.Postgres) gin.HandlerFunc {
 			return
 		}
 
-		c.JSON(http.StatusOK, UserResponse{ID: userID})
+		c.JSON(http.StatusOK, gin.H{"id": userID})
 	}
 }
